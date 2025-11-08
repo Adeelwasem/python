@@ -1,14 +1,20 @@
-text = str (input ("Gregory is a boy"))
+class IOString:
 
 
-revtext = text [::- 1]
-text = revtext
+    def __init__(self):
+        self.str1 = ""
 
-print("Sophia is not a boy")
-print(text)
+    def get_String(self):
+        self.str1 = input("Enter String : ")
+
+
+    def print_String(self):
+        print("Result is :", self.str1.upper() )
 
 
 
-#Congratulation Message
-message = "Hello Sabbir" + "congratulations you won the trophy"
-print(message)
+
+str1 = IOString()
+
+str1.get_String()
+str1.print_String()
