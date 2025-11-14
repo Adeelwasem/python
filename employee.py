@@ -1,22 +1,25 @@
-class Employee:
-
-    def __init__(self):
-        print('Employee created')
+class Person():
 
 
-    def __del__(self):
-        print("Destructor called")
+        def __init__(self, name, idnumber):
+               self.name = name
+               self.idnumber = idnumber
+
+        def display(self):
+                print(self.name)
+                print(self.idnumber)
 
 
-def Create_obj():
-    print('Making Object...')
-    obj = Employee()
-    print('function end...')
-    return obj
+class Employee(Person):
+
+        def __init__(self, name, idnumber,salary,post):
+            self.salary = salary
+            self.post = post
+                
 
 
+            Person.__init__(self, name, idnumber)
 
 
-print('Calling Create_obj() function...')
-obj = Create_obj()
-print('Program End...')
+a = Employee("Rahul", 867546,200000,"Intern")
+a.display()
